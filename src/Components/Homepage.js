@@ -50,10 +50,10 @@ const Homepage = ({ setSearch, getData, Movies, API_KEY }) => {
       />
       <div className="homepage_wrap">
         <div className="movie_poster_wrapper">
-          {/* <img
+          <img
             src={`${posterUrl}${TrendingMovie.poster_path}`}
             alt="tredning movie poster"
-          /> */}
+          />
         </div>
         <div className="trending_movie_description">
           <h1>{TrendingMovie.title}</h1>

@@ -31,7 +31,7 @@
   // Header styling
 
   header {
-    @include dimension(80px, 100%);
+    @include dimension(120px, 100%);
     @include flex(space-between, center);
     background: black;
     position: absolute;
@@ -105,10 +105,19 @@
 
   // Trending Movie container sytling
   .homepage_wrap {
-    @include dimension(90vh, 100%);
-    transform: translateY(10vh);
-    background: rgb(122, 121, 117);
+    @include dimension(85vh, 100%);
+    transform: translateY(15vh);
+    background: rgb(70, 70, 12);
     position: absolute;
+
+    .movie_poster_wrapper {
+      @include dimension(100%, 40%);
+      background: red;
+
+      img {
+        @include dimension(50%, 50%);
+      }
+    }
   }
 
   // searched movies container sytling

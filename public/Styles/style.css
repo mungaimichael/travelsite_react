@@ -20,7 +20,7 @@
 }
 
 .homepage header {
-  height: 80px;
+  height: 120px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,12 +134,23 @@
 }
 
 .homepage .homepage_wrap {
-  height: 90vh;
+  height: 85vh;
   width: 100%;
-  -webkit-transform: translateY(10vh);
-          transform: translateY(10vh);
-  background: #7a7975;
+  -webkit-transform: translateY(15vh);
+          transform: translateY(15vh);
+  background: #46460c;
   position: absolute;
+}
+
+.homepage .homepage_wrap .movie_poster_wrapper {
+  height: 100%;
+  width: 40%;
+  background: red;
+}
+
+.homepage .homepage_wrap .movie_poster_wrapper img {
+  height: 50%;
+  width: 50%;
 }
 
 .homepage .searched {
