@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-const Hero = ({ Movies, TrendingMovie }) => {
+const Hero = ({ Movies }) => {
   // state to handle hero section display
   const [DisplayHero, setDisplayHero] = useState(false);
+  let posterUrl = "https://image.tmdb.org/t/p/w45/";
 
   // function to handle display hero change
   let handleHeroChange = () => {
@@ -11,15 +12,15 @@ const Hero = ({ Movies, TrendingMovie }) => {
     } else {
       setDisplayHero(false);
     }
-    console.log(TrendingMovie);
   };
 
   // function to handle seacrched movies container
   // true value changes container class name to show, false value changes container class name to hide
 
-  // let closeSearchedMovies = () => {
-  //   setDisplayHero(false);
-  // };
+  let closeSearchedMovies = () => {
+    setDisplayHero(false);
+    console.log(DisplayHero);
+  };
 
   // slice Movie array to 5 items
   let firstFiveMovies = Movies.slice(0, 5);
@@ -27,21 +28,24 @@ const Hero = ({ Movies, TrendingMovie }) => {
   useEffect(() => {
     handleHeroChange();
   }, [firstFiveMovies]);
+
   return (
-    <div className={DisplayHero ? "searched show" : "searched hide"}>
+    <div className={DisplayHero ? "searched show" : "searched "}>
       <ul className="searchedMvList">
         {firstFiveMovies.map((mv) => (
           <li key={mv.id}>
-            <h3>{mv.original_title}</h3>
-            <div className="backdrop_path">{/* {mv.backdrop_path} */}</div>
+            <img
+              src={`${posterUrl}${mv.poster_path}`}
+              alt=""
+              id="backdrop_image"
+            />
+            <h3>{mv.title}</h3>
           </li>
         ))}
       </ul>
-      <div className="mostlySearchedMv">
-        <h1>most searched movie</h1>
-        {/* <img src={Movies[0].backdrop_path} alt="just an image" /> */}
-      </div>
-      {/* <button onClick={closeSearchedMovies}>X</button> */}
+
+      {/* button to close searched container */}
+      <button onClick={() => closeSearchedMovies(DisplayHero)}>X</button>
     </div>
   );
 };

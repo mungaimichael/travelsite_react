@@ -105,17 +105,50 @@
 
   // Trending Movie container sytling
   .homepage_wrap {
-    @include dimension(85vh, 100%);
-    transform: translateY(15vh);
-    background: rgb(70, 70, 12);
+    @include dimension(84vh, 100%);
+    @include flex(center, start);
+    transform: translateY(16vh);
+    background: black;
+    // filter: opacity(0.7);
     position: absolute;
+    z-index: 1;
 
     .movie_poster_wrapper {
       @include dimension(100%, 40%);
-      background: red;
+      opacity: 0.7;
 
       img {
-        @include dimension(50%, 50%);
+        @include dimension(600px, 620px);
+        padding: 0 1rem;
+      }
+    }
+    .trending_movie_description {
+      @include dimension(60%, 60%);
+      @include flex(start, space-around);
+      flex-direction: column;
+      padding-left: 2rem;
+
+      h1 {
+        font-size: 3em;
+        font-family: var(--second-font);
+        @include dimension(70px, 100%);
+        color: rgba(255, 255, 255, 0.678);
+        padding: 0 0 2rem 0;
+      }
+      p {
+        @include dimension(auto, 60%);
+        color: rgba(255, 255, 255, 0.678);
+        line-height: 1.2em;
+        font-family: var(--primary-font);
+        flex: 2;
+        padding: 2rem 0;
+        font-size: 25px;
+      }
+      h2 {
+        color: rgba(255, 255, 255, 0.678);
+        @include dimension(70px, 50%);
+        font-family: var(--second-font);
+        font-size: 3em;
       }
     }
   }
@@ -124,26 +157,49 @@
 
   .searched {
     @include dimension(50vh, 100%);
-    background: black;
+    position: absolute;
+    z-index: 2;
+    top: 15vh;
+    transform: translateY(-100vh);
+    transition: transform 0.4s ease-in-out;
 
     &.show {
+      transform: translateY(0);
       ul.searchedMvList {
-        @include dimension(100%, 45%);
+        @include dimension(100%, 100%);
         @include flex(space-around, start);
         flex-direction: column;
-        background: rgb(148, 14, 14);
         color: white;
-      }
-      div.mostlySearchedMv {
-        h1 {
-          font-family: var(--second-font);
-          font-weight: bold;
-          font-size: 35px;
+        list-style: none;
+        background: black;
+
+        li {
+          @include dimension(auto, 50%);
+          @include flex(space-around, center);
+          padding: 0 2rem;
+
+          h3 {
+            flex: 2;
+            align-self: flex-start;
+            padding: 0 1rem 1rem;
+            font-family: var(--second-font);
+          }
         }
       }
     }
-    &.hide {
-      transform: translateX(-100%);
+    button {
+      @include dimension(50px, 50px);
+      background: gold;
+      position: absolute;
+      right: 0;
+      top: 0px;
+      z-index: 2;
+      font-size: 50px;
+      font-family: var(--second-font);
+      color: white;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
     }
   }
 }

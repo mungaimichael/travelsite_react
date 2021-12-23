@@ -14,7 +14,7 @@ const Homepage = ({ setSearch, getData, Movies, API_KEY }) => {
   let trendingMvUrl = "https://api.themoviedb.org/3/trending/movie/week?";
 
   // MOVIE IMAGE URL
-  let posterUrl = "https://image.tmdb.org/t/p/w185/";
+  let posterUrl = "https://image.tmdb.org/t/p/w500/";
 
   // function to get random trending movie
   let getTrendingMv = async () => {
@@ -30,6 +30,8 @@ const Homepage = ({ setSearch, getData, Movies, API_KEY }) => {
     movieHandler(trendingMovie);
   };
 
+  // function to set the trending movie to component state
+
   let movieHandler = (trending) => {
     let movie = trending;
     setTrendingMovie(movie);
@@ -39,6 +41,7 @@ const Homepage = ({ setSearch, getData, Movies, API_KEY }) => {
   useEffect(() => {
     getTrendingMv();
   }, []);
+
   return (
     <div className="homepage">
       <Header
@@ -50,22 +53,15 @@ const Homepage = ({ setSearch, getData, Movies, API_KEY }) => {
       />
       <div className="homepage_wrap">
         <div className="movie_poster_wrapper">
-          <img
-            src={`${posterUrl}${TrendingMovie.poster_path}`}
-            alt="tredning movie poster"
-          />
+          <img src={`${posterUrl}${TrendingMovie.poster_path}`} alt="" />
         </div>
         <div className="trending_movie_description">
           <h1>{TrendingMovie.title}</h1>
           <p>{TrendingMovie.overview}</p>
-          <h2 id="rating">{TrendingMovie.vote_average}</h2>
+          <h2 id="rating">{`${TrendingMovie.vote_average} RATING`}</h2>
         </div>
       </div>
-      <SearchedMovie
-        Movies={Movies}
-        TrendingMovie={TrendingMovie}
-        posterUrl={posterUrl}
-      />
+      <SearchedMovie Movies={Movies} TrendingMovie={TrendingMovie} />
     </div>
   );
 };
