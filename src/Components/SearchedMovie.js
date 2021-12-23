@@ -25,9 +25,15 @@ const Hero = ({ Movies }) => {
   // slice Movie array to 5 items
   let firstFiveMovies = Movies.slice(0, 5);
 
-  useEffect(() => {
-    handleHeroChange();
-  }, [firstFiveMovies]);
+  // eslint-disable-next-line
+
+  useEffect(
+    () => {
+      handleHeroChange();
+    },
+    // eslint-disable-next-line
+    [firstFiveMovies]
+  );
 
   return (
     <div className={DisplayHero ? "searched show" : "searched "}>

@@ -38,9 +38,13 @@ const Homepage = ({ setSearch, getData, Movies, API_KEY }) => {
   };
 
   // run function to fetch trending movie once during loudup
-  useEffect(() => {
-    getTrendingMv();
-  }, []);
+  useEffect(
+    () => {
+      getTrendingMv();
+    },
+    // eslint-disable-next-line
+    []
+  );
 
   return (
     <div className="homepage">
