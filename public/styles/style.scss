@@ -1,0 +1,326 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+// media query breakpoints
+// $breakpoints: (
+//   phone: 640px,
+//   tablet: 768px,
+//   desktop: 1024px,
+// ) !default;
+:root {
+  --primary-font: Poppins;
+  --sec-font: Montserrat;
+}
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin dimension($height, $width) {
+  height: $height;
+  width: $width;
+}
+html {
+  position: relative;
+}
+body {
+  @include dimension(100vh, 100%);
+
+  @include flex(center, center);
+
+  #root {
+    @include dimension(100%, 100%);
+    background: #052c49ff;
+
+    // HEADER STYLING
+
+    header {
+      @include dimension(13vh, 100%);
+      @include flex(space-around, center);
+
+      span.logo {
+        @include dimension(100%, 15%);
+        @include flex(center, center);
+
+        a {
+          font-family: var(--sec-font);
+          font-size: 28px;
+          text-decoration: underline 3px rgba(255, 255, 255, 0.5);
+          text-transform: uppercase;
+          font-weight: bold;
+          color: #edf2f4ff;
+        }
+      }
+      ul.navlist {
+        @include dimension(100%, 35%);
+        @include flex(space-evenly, center);
+
+        li {
+          @include dimension(100%, auto);
+          @include flex(space-evenly, center);
+          transition: border-top 0.3s ease-in-out;
+          list-style: none;
+
+          &:hover {
+            border-top: 2px solid white;
+            cursor: pointer;
+            opacity: 0.5;
+          }
+
+          a {
+            @include dimension(100%, auto);
+            @include flex(space-evenly, center);
+
+            font-family: var(--sec-font);
+            text-decoration: none;
+            font-size: 20px;
+            color: #8d99aeff;
+          }
+        }
+        li.register {
+          @include dimension(50%, 30%);
+          border: 0;
+          opacity: 1;
+
+          a {
+            @include dimension(100%, 100%);
+
+            button {
+              @include dimension(100%, 100%);
+              font-size: 20px;
+              font-family: var(--primary-font);
+              text-transform: uppercase;
+              font-weight: bold;
+              background: transparent;
+              color: #edf2f4ff;
+              border: 2px solid #8d99aeff;
+              letter-spacing: 0.1rem;
+              transition: color 0.3s ease-in-out;
+              padding: 5px;
+
+              &:hover {
+                cursor: pointer;
+                color: #8d99aeff;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Hero styling
+    .hero_container {
+      @include dimension(87%, 100%);
+      background: #4180a1ff;
+      @include flex(space-between, center);
+
+      .hero_img {
+        @include dimension(100%, 50%);
+        @include flex(center, center);
+
+        img {
+          @include dimension(80%, 80%);
+        }
+      }
+      .hero_description {
+        @include dimension(80%, 50%);
+        @include flex(space-around, start);
+        flex-direction: column;
+        h1 {
+          font-family: var(--primary-font);
+          font-size: 4rem;
+          color: #ebaa5eff;
+        }
+        p {
+          font-family: var(--sec-font);
+          @include dimension(auto, 50%);
+          font-size: 25px;
+          color: white;
+          font-weight: bold;
+        }
+      }
+      button {
+        @include dimension(60px, 250px);
+        font-family: var(--primary-font);
+        background: #ebaa5eff;
+        border: 0;
+        font-size: 25px;
+        transition: all 0.4s ease-out;
+
+        &:hover {
+          background: #052c49ff;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+    // Section 2 styling '
+    .section_two {
+      @include dimension(100vh, 100%);
+
+      @include flex(space-evenly, center);
+      flex-direction: row-reverse;
+
+      .section_color_card {
+        @include dimension(60%, 40%);
+        background: url("../styles/section2.jpg") center no-repeat;
+        background-size: cover;
+      }
+      .section_description {
+        @include dimension(60%, 40%);
+        @include flex(center, center);
+        flex-direction: column;
+
+        h1 {
+          font-family: var(--primary-font);
+          color: #ebaa5eff;
+          font-size: 6em;
+          align-self: flex-start;
+          text-decoration: 7px underline #4180a1ff;
+        }
+        p {
+          font-family: var(--primary-font);
+          color: #4180a1ff;
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+    }
+    // trip cards section
+    .packages {
+      @include dimension(100vh, 100%);
+      background: #4180a1ff;
+
+      ul {
+        @include dimension(100%, 100%);
+        @include flex(space-evenly, center);
+
+        li {
+          @include dimension(60%, 85%);
+          @include flex(space-around, center);
+          flex-direction: column;
+          background: #ebaa5eff;
+          margin: 0.5rem 1rem;
+          box-shadow: 5px 5px 12px white;
+          transition: box-shadow 0.4s ease-in-out;
+
+          h1 {
+            font-size: 2.5rem;
+            font-family: var(--sec-font);
+            text-decoration: 5px underline #4180a1ff;
+            color: white;
+          }
+
+          p {
+            font-size: 1.5rem;
+            font-family: var(--primary-font);
+            color: #4180a1ff;
+          }
+          &:hover {
+            box-shadow: 0 0 0 white;
+            border: 0;
+          }
+
+          button {
+            @include dimension(60px, 60%);
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-family: var(--primary-font);
+            font-weight: bold;
+            background: #4180a1ff;
+            border: 0;
+            color: white;
+            cursor: pointer;
+          }
+        }
+        #diamond {
+          @include dimension(70%, 85%);
+
+          h1 {
+            font-size: 3rem;
+          }
+          button {
+            background: transparent;
+            border: 4px solid #4180a1ff;
+            color: #4180a1ff;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+              color: white;
+              background: #4180a1ff;
+            }
+          }
+        }
+      }
+    }
+    // register STYLING
+    .footer_register {
+      @include dimension(80vh, 100%);
+      @include flex(space-around, flex-start);
+      flex-direction: row-reverse;
+
+      h1 {
+        font-family: var(--primary-font);
+        font-size: 4rem;
+        color: #ebaa5eff;
+        text-align: center;
+        position: absolute;
+        top: 0;
+      }
+      footer,
+      .register {
+        @include dimension(60vh, 50%);
+        @include flex(center, center);
+        flex-direction: column;
+        border-left: 4px solid #ebaa5eff;
+        margin: 1rem 0;
+        position: relative;
+
+        ul {
+          @include dimension(30%, 30%);
+          flex-direction: column;
+          @include flex(flex-start, flex-start);
+          list-style: none;
+
+          li {
+            a {
+              text-decoration: none;
+              color: #4180a1ff;
+              font-size: 1.8rem;
+              font-family: var(--sec-font);
+            }
+          }
+        }
+      }
+      .register > form {
+        @include dimension(30%, 70%);
+
+        div {
+          @include dimension(40px, 100%);
+          @include flex(space-evenly, center);
+          label {
+            font-size: 1rem;
+            font-family: var(--primary-font);
+            align-self: flex-start;
+          }
+          input {
+            @include dimension(25px, 80%);
+            font-family: var(--primary-font);
+            font-weight: 20px;
+            font-weight: bolder;
+          }
+        }
+        button {
+          @include dimension(40px, 40%);
+          @include flex(center, center);
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

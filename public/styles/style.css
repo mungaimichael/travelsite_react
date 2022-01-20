@@ -1,0 +1,532 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-font: Poppins;
+  --sec-font: Montserrat;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #root {
+  height: 100%;
+  width: 100%;
+  background: #052c49ff;
+}
+
+body #root header {
+  height: 13vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #root header span.logo {
+  height: 100%;
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #root header span.logo a {
+  font-family: var(--sec-font);
+  font-size: 28px;
+  -webkit-text-decoration: underline 3px rgba(255, 255, 255, 0.5);
+          text-decoration: underline 3px rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #edf2f4ff;
+}
+
+body #root header ul.navlist {
+  height: 100%;
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #root header ul.navlist li {
+  height: 100%;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: border-top 0.3s ease-in-out;
+  transition: border-top 0.3s ease-in-out;
+  list-style: none;
+}
+
+body #root header ul.navlist li:hover {
+  border-top: 2px solid white;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+body #root header ul.navlist li a {
+  height: 100%;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: var(--sec-font);
+  text-decoration: none;
+  font-size: 20px;
+  color: #8d99aeff;
+}
+
+body #root header ul.navlist li.register {
+  height: 50%;
+  width: 30%;
+  border: 0;
+  opacity: 1;
+}
+
+body #root header ul.navlist li.register a {
+  height: 100%;
+  width: 100%;
+}
+
+body #root header ul.navlist li.register a button {
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+  font-weight: bold;
+  background: transparent;
+  color: #edf2f4ff;
+  border: 2px solid #8d99aeff;
+  letter-spacing: 0.1rem;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  padding: 5px;
+}
+
+body #root header ul.navlist li.register a button:hover {
+  cursor: pointer;
+  color: #8d99aeff;
+}
+
+body #root .hero_container {
+  height: 87%;
+  width: 100%;
+  background: #4180a1ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #root .hero_container .hero_img {
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #root .hero_container .hero_img img {
+  height: 80%;
+  width: 80%;
+}
+
+body #root .hero_container .hero_description {
+  height: 80%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #root .hero_container .hero_description h1 {
+  font-family: var(--primary-font);
+  font-size: 4rem;
+  color: #ebaa5eff;
+}
+
+body #root .hero_container .hero_description p {
+  font-family: var(--sec-font);
+  height: auto;
+  width: 50%;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}
+
+body #root .hero_container button {
+  height: 60px;
+  width: 250px;
+  font-family: var(--primary-font);
+  background: #ebaa5eff;
+  border: 0;
+  font-size: 25px;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+body #root .hero_container button:hover {
+  background: #052c49ff;
+  color: white;
+  cursor: pointer;
+}
+
+body #root .section_two {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+body #root .section_two .section_color_card {
+  height: 60%;
+  width: 40%;
+  background: url("../styles/section2.jpg") center no-repeat;
+  background-size: cover;
+}
+
+body #root .section_two .section_description {
+  height: 60%;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #root .section_two .section_description h1 {
+  font-family: var(--primary-font);
+  color: #ebaa5eff;
+  font-size: 6em;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-text-decoration: 7px underline #4180a1ff;
+          text-decoration: 7px underline #4180a1ff;
+}
+
+body #root .section_two .section_description p {
+  font-family: var(--primary-font);
+  color: #4180a1ff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+body #root .packages {
+  height: 100vh;
+  width: 100%;
+  background: #4180a1ff;
+}
+
+body #root .packages ul {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #root .packages ul li {
+  height: 60%;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #ebaa5eff;
+  margin: 0.5rem 1rem;
+  -webkit-box-shadow: 5px 5px 12px white;
+          box-shadow: 5px 5px 12px white;
+  -webkit-transition: -webkit-box-shadow 0.4s ease-in-out;
+  transition: -webkit-box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+}
+
+body #root .packages ul li h1 {
+  font-size: 2.5rem;
+  font-family: var(--sec-font);
+  -webkit-text-decoration: 5px underline #4180a1ff;
+          text-decoration: 5px underline #4180a1ff;
+  color: white;
+}
+
+body #root .packages ul li p {
+  font-size: 1.5rem;
+  font-family: var(--primary-font);
+  color: #4180a1ff;
+}
+
+body #root .packages ul li:hover {
+  -webkit-box-shadow: 0 0 0 white;
+          box-shadow: 0 0 0 white;
+  border: 0;
+}
+
+body #root .packages ul li button {
+  height: 60px;
+  width: 60%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  background: #4180a1ff;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+
+body #root .packages ul #diamond {
+  height: 70%;
+  width: 85%;
+}
+
+body #root .packages ul #diamond h1 {
+  font-size: 3rem;
+}
+
+body #root .packages ul #diamond button {
+  background: transparent;
+  border: 4px solid #4180a1ff;
+  color: #4180a1ff;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+body #root .packages ul #diamond button:hover {
+  color: white;
+  background: #4180a1ff;
+}
+
+body #root .footer_register {
+  height: 80vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+body #root .footer_register h1 {
+  font-family: var(--primary-font);
+  font-size: 4rem;
+  color: #ebaa5eff;
+  text-align: center;
+  position: absolute;
+  top: 0;
+}
+
+body #root .footer_register footer,
+body #root .footer_register .register {
+  height: 60vh;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-left: 4px solid #ebaa5eff;
+  margin: 1rem 0;
+  position: relative;
+}
+
+body #root .footer_register footer ul,
+body #root .footer_register .register ul {
+  height: 30%;
+  width: 30%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  list-style: none;
+}
+
+body #root .footer_register footer ul li a,
+body #root .footer_register .register ul li a {
+  text-decoration: none;
+  color: #4180a1ff;
+  font-size: 1.8rem;
+  font-family: var(--sec-font);
+}
+
+body #root .footer_register .register > form {
+  height: 30%;
+  width: 70%;
+}
+
+body #root .footer_register .register > form div {
+  height: 40px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #root .footer_register .register > form div label {
+  font-size: 1rem;
+  font-family: var(--primary-font);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+body #root .footer_register .register > form div input {
+  height: 25px;
+  width: 80%;
+  font-family: var(--primary-font);
+  font-weight: 20px;
+  font-weight: bolder;
+}
+
+body #root .footer_register .register > form button {
+  height: 40px;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style.css.map */
