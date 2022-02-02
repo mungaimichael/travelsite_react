@@ -50,7 +50,6 @@ body {
         a {
           font-family: var(--sec-font);
           font-size: 28px;
-          text-decoration: underline 3px rgba(255, 255, 255, 0.5);
           text-transform: uppercase;
           font-weight: bold;
           color: #edf2f4ff;
@@ -293,13 +292,15 @@ body {
               color: #4180a1ff;
               font-size: 1.8rem;
               font-family: var(--sec-font);
+              font-weight: 900;
             }
           }
         }
       }
       .register > form {
-        @include dimension(30%, 70%);
-
+        @include dimension(50%, 70%);
+        @include flex(space-around, flex-start);
+        flex-direction: column;
         div {
           @include dimension(40px, 100%);
           @include flex(space-evenly, center);
@@ -307,9 +308,11 @@ body {
             font-size: 1rem;
             font-family: var(--primary-font);
             align-self: flex-start;
+            flex: 1;
+            align-self: flex-end;
           }
           input {
-            @include dimension(25px, 80%);
+            @include dimension(40px, 80%);
             font-family: var(--primary-font);
             font-weight: 20px;
             font-weight: bolder;
@@ -319,6 +322,12 @@ body {
           @include dimension(40px, 40%);
           @include flex(center, center);
           margin: 0 auto;
+          background: #ebaa5eff;
+          border: 0;
+          font-size: 23px;
+          font-family: var(--sec-font);
+          font-weight: 800;
+          color: white;
         }
       }
     }

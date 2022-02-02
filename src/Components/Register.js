@@ -8,10 +8,12 @@ const Register = () => {
         <h1>socials</h1>
         <ul>
           <li>
-            <Link>github</Link>
-          </li>
-          <li>
-            <Link>gmail</Link>
+            <Link
+              to={{ pathname: "https://github.com/mungaimichael" }}
+              target="_blank"
+            >
+              github
+            </Link>
           </li>
         </ul>
       </footer>
